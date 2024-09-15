@@ -1,0 +1,258 @@
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import 'new2_model.dart';
+export 'new2_model.dart';
+
+class New2Widget extends StatefulWidget {
+  const New2Widget({super.key});
+
+  @override
+  State<New2Widget> createState() => _New2WidgetState();
+}
+
+class _New2WidgetState extends State<New2Widget> {
+  late New2Model _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => New2Model());
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => _model.unfocusNode.canRequestFocus
+          ? FocusScope.of(context).requestFocus(_model.unfocusNode)
+          : FocusScope.of(context).unfocus(),
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).accent1,
+        body: SafeArea(
+          top: true,
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              Container(
+                width: 402,
+                height: 100,
+                decoration: BoxDecoration(
+                  color: Color(0xE1EEB72E),
+                ),
+                child: Align(
+                  alignment: AlignmentDirectional(0, 0),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Align(
+                        alignment: AlignmentDirectional(0, 0),
+                        child: Text(
+                          '            WELCOME !',
+                          textAlign: TextAlign.center,
+                          style:
+                              FlutterFlowTheme.of(context).bodyMedium.override(
+                                    fontFamily: 'Merriweather',
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    fontSize: 35,
+                                    letterSpacing: 0,
+                                  ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Spacer(flex: 30),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Text(
+                    '                    Choose Login Option',
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          fontFamily: 'Merriweather',
+                          color: FlutterFlowTheme.of(context).alternate,
+                          fontSize: 20,
+                          letterSpacing: 0,
+                        ),
+                  ),
+                ],
+              ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [],
+              ),
+              Container(
+                width: 297,
+                height: 223,
+                decoration: BoxDecoration(
+                  color: FlutterFlowTheme.of(context).secondaryBackground,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(40),
+                    bottomRight: Radius.circular(40),
+                    topLeft: Radius.circular(40),
+                    topRight: Radius.circular(40),
+                  ),
+                  shape: BoxShape.rectangle,
+                ),
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Spacer(),
+                    FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed('LOGINparent');
+                      },
+                      text: 'Parent',
+                      options: FFButtonOptions(
+                        width: 250,
+                        height: 40,
+                        padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                        iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        color: Color(0xE1EEB72E),
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleSmall
+                            .override(
+                              fontFamily: 'PT Serif',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              letterSpacing: 0,
+                            ),
+                        elevation: 3,
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    Spacer(),
+                    FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed('LOGIN');
+                      },
+                      text: 'Health Officer',
+                      options: FFButtonOptions(
+                        width: 250,
+                        height: 40,
+                        padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                        iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        color: Color(0xE1EEB72E),
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleSmall
+                            .override(
+                              fontFamily: 'PT Serif',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              letterSpacing: 0,
+                            ),
+                        elevation: 3,
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    Spacer(),
+                    FFButtonWidget(
+                      onPressed: () async {
+                        context.pushNamed('LOGIN');
+                      },
+                      text: 'Government Officer',
+                      options: FFButtonOptions(
+                        width: 250,
+                        height: 40,
+                        padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                        iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                        color: Color(0xE1EEB72E),
+                        textStyle: FlutterFlowTheme.of(context)
+                            .titleSmall
+                            .override(
+                              fontFamily: 'PT Serif',
+                              color: FlutterFlowTheme.of(context).primaryText,
+                              letterSpacing: 0,
+                            ),
+                        elevation: 3,
+                        borderSide: BorderSide(
+                          color: Colors.transparent,
+                          width: 1,
+                        ),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                    ),
+                    Spacer(),
+                  ],
+                ),
+              ),
+              Spacer(flex: 20),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  Align(
+                    alignment: AlignmentDirectional(0, 0),
+                    child: Text(
+                      '                       Do not have an account?',
+                      style: FlutterFlowTheme.of(context).bodyMedium.override(
+                            fontFamily: 'Oswald',
+                            color: FlutterFlowTheme.of(context).alternate,
+                            fontSize: 20,
+                            letterSpacing: 0,
+                          ),
+                    ),
+                  ),
+                ],
+              ),
+              Spacer(flex: 10),
+              FFButtonWidget(
+                onPressed: () async {
+                  context.pushNamed('Register');
+                },
+                text: 'Register',
+                options: FFButtonOptions(
+                  height: 40,
+                  padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                  iconPadding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
+                  color: FlutterFlowTheme.of(context).primaryText,
+                  textStyle: FlutterFlowTheme.of(context).titleSmall.override(
+                        fontFamily: 'Oswald',
+                        color: Colors.white,
+                        letterSpacing: 0,
+                      ),
+                  elevation: 3,
+                  borderSide: BorderSide(
+                    color: Colors.transparent,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+              ),
+              Spacer(flex: 30),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8),
+                child: Image.asset(
+                  'assets/images/Screenshot_2024-04-14_165101-removebg-preview.png',
+                  width: 263,
+                  height: 245,
+                  fit: BoxFit.cover,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
